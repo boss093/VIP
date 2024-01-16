@@ -696,7 +696,7 @@ Plr_Tab:Add(v.Name)
  end
 end)
 
-page5:Button("วาปหาผู้เล่น[ถ้าไกลเกินจะไม่ติด]", function(value)
+page5:Button1("วาปหาผู้เล่น[ถ้าไกลเกินจะไม่ติด]", function(value)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[SPlayer].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,5)
 end)
 
