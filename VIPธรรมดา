@@ -875,4 +875,4 @@ page8:Button("แจ้งบัคที่", function(value)
 setclipboard("https://discord.com/invite/eZ59xsBn")
 end)
 
-local getlable = page8:Label("สามารถแจ้งบัคได้ที่@bossza_007")
+local getlable = page8:Label("สามารถแจ้งบัคได้ที่@bossza_007.")
