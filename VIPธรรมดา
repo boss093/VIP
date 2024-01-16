@@ -137,7 +137,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Vault"
 end)
 
 page1:Toggle("ออโต้โพหิน",nil, function(value)
-	_G.mm = Value
+	_G.mm = value
 spawn(function()
 while _G.mm do wait(.3)
         pcall(function()
@@ -172,6 +172,50 @@ end)
 end)
 
 local getlable = page1:Label("ฟามอื่นๆ[ไม่ใช้ตู้]")
+
+
+page1:Toggle("ออโต้ฟามหิน",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Mine:FindFirstChild "Rock" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-274.307739, 76.4374771, -1019.18475, -0.0303287338, -1.03611434e-07, 0.999539971, 3.38463124e-08, 1, 1.04686102e-07, -0.999539971, 3.70057407e-08, -0.0303287338)
+elseif game:GetService("Workspace").PickableItem.Mine:FindFirstChild "Rock" then
+for i , v in pairs(game.workspace.PickableItem.Mine:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-7,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.4)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+    
+    spawn(function()
+    while _G.mm do wait(1)
+        pcall(function()
+         up()
+     end)
+     end
+     end)
+end)    
 
 page1:Toggle("ฟามแตงโม",nil, function(value)
 	_G.mm = value
