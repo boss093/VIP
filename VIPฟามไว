@@ -695,7 +695,7 @@ Plr_Tab:Add(v.Name)
  end
 end)
 
-page5:Button("วาปหาผู้เล่น[ถ้าไกลเกินจะไม่ติด]", function(value)
+page5:Button1("วาปหาผู้เล่น[ถ้าไกลเกินจะไม่ติด]", function(value)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[SPlayer].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,5)
 end)
 
@@ -723,7 +723,7 @@ page6:Toggle("ออโต้วาปหาผู้เล่น[ใต้ด�
    end)
    
    
-page6:Button("ESP", function(value)
+page6:Button1("ESP", function(value)
 local FillColor = Color3.fromRGB(175,25,255)
 local DepthMode = "AlwaysOnTop"
 local FillTransparency = 0.5
@@ -872,7 +872,7 @@ end)
 
 local getlable = page7:Label("ถ้าตาย")
 
-page7:Button("เกิดใหม่", function(value)
+page7:Button1("เกิดใหม่", function(value)
     local args = {
     [1] = "Respawn",
     [2] = game:GetService("Players").LocalPlayer
@@ -914,7 +914,7 @@ end)
 
 page8:Ti("เสริม")
 local getlable = page8:Label("ผู้ช่วยSSS HUB")
-page8:Button("แจ้งบัคที่", function(value)
+page8:Button1("แจ้งบัคที่", function(value)
 setclipboard("https://discord.com/invite/eZ59xsBn")
 end)
 
