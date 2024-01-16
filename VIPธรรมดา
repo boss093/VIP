@@ -1,0 +1,878 @@
+if game.CoreGui:FindFirstChild("ThunderScreen") then
+    game.CoreGui:FindFirstChild("ThunderScreen"):Destroy()
+end
+
+local ThunderScreen = Instance.new("ScreenGui")
+local ThunderToggleUI = Instance.new("TextButton")
+local ThunderCornerUI = Instance.new("UICorner")
+local ThunderImageUI = Instance.new("ImageLabel")
+
+        ThunderScreen.Name = "ThunderScreen"
+        ThunderScreen.Parent = game.CoreGui
+        ThunderScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+        ThunderToggleUI.Name = "X HUB"
+        ThunderToggleUI.Parent = ThunderScreen
+        ThunderToggleUI.BackgroundColor3 = Color3.fromRGB(31,31,31)
+        ThunderToggleUI.BorderSizePixel = 0
+        ThunderToggleUI.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+        ThunderToggleUI.Size = UDim2.new(0, 50, 0, 50)
+        ThunderToggleUI.Font = Enum.Font.SourceSans
+        ThunderToggleUI.Text = ""
+        ThunderToggleUI.TextColor3 = Color3.fromRGB(0, 0, 0)
+        ThunderToggleUI.TextSize = 14.000
+        ThunderToggleUI.Draggable = true
+        ThunderToggleUI.MouseButton1Click:Connect(function()
+        game.CoreGui:FindFirstChild("NBTxTP Lib").Enabled = not game.CoreGui:FindFirstChild("NBTxTP Lib").Enabled
+        end)
+
+        ThunderCornerUI.Name = "ThunderCornerUI"
+        ThunderCornerUI.Parent = ThunderToggleUI
+
+        ThunderImageUI.Name = "MODILEMAGE"
+        ThunderImageUI.Parent = ThunderToggleUI
+        ThunderImageUI.BackgroundColor3 = Color3.fromRGB(192,192,192)
+        ThunderImageUI.BackgroundTransparency = 1.000
+        ThunderImageUI.BorderSizePixel = 0
+        ThunderImageUI.Position = UDim2.new(0.0, 0, 0.0, 0)
+        ThunderImageUI.Size = UDim2.new(0, 50, 0, 50)
+        ThunderImageUI.Image = "http://www.roblox.com/asset/?id=15909395058"
+        
+function up()
+local args = {
+    [1] = "Use",
+    [2] = "Pickaxe"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Inventory"):FireServer(unpack(args))
+end
+
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/UI-Library-Robloxx"))()
+local window = library:Win()
+local tap1 = window:addtap("Farming")
+local tap2 = window:addtap("Teleport")
+local tap3 = window:addtap("Players")
+local tap4 = window:addtap("เสริม")
+local page1 = tap1:addpage()
+local page2 = tap1:addpage()
+local page3 = tap2:addpage()
+local page4 = tap2:addpage()
+local page5 = tap3:addpage()
+local page6 = tap3:addpage()
+local page7 = tap4:addpage()
+local page8 = tap4:addpage()
+
+
+page1:Ti("Farming")
+
+page1:Button("เช็คราคาตลาดโลก", function(value)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",false,game)
+end)
+
+page1:Button1("จุดโพ", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3130.66357, 58.2725334, -3403.56836, 0.998322964, -1.12639107e-08, -0.0578901768, 1.31714994e-08, 1, 3.25702807e-08, 0.0578901768, -3.32781589e-08, 0.998322964)
+end)
+
+local getlable = page1:Label("มีตู้แล้วเท่านั้นนะ[ถ้าไม่มีมันจะหลุด]")
+
+
+page1:Toggle("ออโต้ฟามหิน",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Mine:FindFirstChild "Rock" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-274.307739, 76.4374771, -1019.18475, -0.0303287338, -1.03611434e-07, 0.999539971, 3.38463124e-08, 1, 1.04686102e-07, -0.999539971, 3.70057407e-08, -0.0303287338)
+elseif game:GetService("Workspace").PickableItem.Mine:FindFirstChild "Rock" then
+for i , v in pairs(game.workspace.PickableItem.Mine:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-7,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.4)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+
+
+spawn(function()
+    while _G.mm do wait(.3)
+        pcall(function()
+local map = game.Players.LocalPlayer.Inventory:FindFirstChild "Stone"
+if map.Value == 60 then
+ local args = {
+    [1] = "Store",
+    [2] = "Stone",
+    [3] = 60
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Vault"):FireServer(unpack(args))
+            end
+        end)
+    end
+    end)
+    
+    spawn(function()
+    while _G.mm do wait(1)
+        pcall(function()
+         up()
+     end)
+     end
+     end)
+end)
+
+page1:Toggle("ออโต้โพหิน",nil, function(value)
+	_G.mm = Value
+spawn(function()
+while _G.mm do wait(.3)
+        pcall(function()
+if not game.Players.LocalPlayer.Inventory:FindFirstChild "Stone" then
+ local args = {
+    [1] = "Get",
+    [2] = "Stone",
+    [3] = 60
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Vault"):FireServer(unpack(args))
+elseif game.Players.LocalPlayer.Inventory:FindFirstChild "Stone" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3128.42993, 58.2725334, -3407.70874, 0.999808013, 1.06950555e-08, -0.0195941292, -9.4821857e-09, 1, 6.19925729e-08, 0.0195941292, -6.17948714e-08, 0.999808013)
+            end
+        end)
+    end
+    end)
+    
+    
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+end)
+
+local getlable = page1:Label("ฟามอื่นๆ[ไม่ใช้ตู้]")
+
+page1:Toggle("ฟามแตงโม",nil, function(value)
+	_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Watermelon:FindFirstChild "Watermelon" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-895.097656, 58.8164215, -2017.35767, -0.0242868774, 1.24319204e-08, 0.999705017, -2.25981296e-08, 1, -1.29845885e-08, -0.999705017, -2.29068196e-08, -0.0242868774)
+elseif game:GetService("Workspace").PickableItem.Watermelon:FindFirstChild "Watermelon" then
+for i , v in pairs(game.workspace.PickableItem.Watermelon:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-3,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.3)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,20)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if _G.mm == true then
+                local map = game.Players.LocalPlayer.Inventory.Watermelon
+if map.Value == 60 then
+ local args = {
+    [1] = "Watermelon",
+    [2] = "60"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("WorldMarket_Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                                   end
+                            end
+                     end)
+              end
+       end)
+end)
+
+
+page1:Toggle("ฟามกล้วย",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Banana.Banana:FindFirstChild "Banana" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-837.882996, 56.9999962, -3134.86694, -0.0935042575, -6.28139887e-08, 0.99561888, -6.39958619e-09, 1, 6.24893772e-08, -0.99561888, -5.28526389e-10, -0.0935042575)
+elseif game:GetService("Workspace").PickableItem.Banana.Banana:FindFirstChild "Banana" then
+for i , v in pairs(game.workspace.PickableItem.Banana:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(-11,0,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if _G.mm == true then
+                local map = game.Players.LocalPlayer.Inventory.Banana
+if map.Value == 50 then
+ local args = {
+    [1] = "Banana",
+    [2] = "50"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("WorldMarket_Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                                   end
+                            end
+                     end)
+              end
+       end)
+end)
+
+
+page1:Toggle("ฟามผักกาด",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Cabbage.Cabbage:FindFirstChild "Sphere.001" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-886.760864, 58.4810753, -4643.43555, 0.0291027091, -1.09859517e-08, -0.999576449, -1.77091817e-08, 1, -1.15062102e-08, 0.999576449, 1.80365429e-08, 0.0291027091)
+elseif game:GetService("Workspace").PickableItem.Cabbage.Cabbage:FindFirstChild "Sphere.001" then
+for i , v in pairs(game.workspace.PickableItem.Cabbage.Cabbage:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-5,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if _G.mm == true then
+                local map = game.Players.LocalPlayer.Inventory.Cabbage
+if map.Value == 60 then
+ local args = {
+    [1] = "Cabbage",
+    [2] = "60"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("WorldMarket_Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                                   end
+                            end
+                     end)
+              end
+       end)
+end)
+
+
+page1:Toggle("ฟามส้ม",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Orange.Orange:FindFirstChild "Leaf" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2486.31104, 109.478371, -2498.73999, 0.860441267, 2.65580358e-08, 0.509549618, -1.71768182e-08, 1, -2.31153017e-08, -0.509549618, 1.11369172e-08, 0.860441267)
+elseif game:GetService("Workspace").PickableItem.Orange.Orange:FindFirstChild "Leaf" then
+for i , v in pairs(game.workspace.PickableItem.Orange.Orange:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-7,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if _G.mm == true then
+                local map = game.Players.LocalPlayer.Inventory.Orange
+if map.Value == 60 then
+ local args = {
+    [1] = "Orange",
+    [2] = "60"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("WorldMarket_Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                                   end
+                            end
+                     end)
+              end
+       end)
+end)
+
+
+page1:Toggle("ฟามสตอเบอร์รี่",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Strawberry.Strawberry:FindFirstChild "Meshes/Cube.005" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(316.179077, 58.7837067, 86.8468857, 0.981077671, 8.82877558e-08, 0.193614691, -8.15612111e-08, 1, -4.2713058e-08, -0.193614691, 2.61133781e-08, 0.981077671)
+elseif game:GetService("Workspace").PickableItem.Strawberry.Strawberry:FindFirstChild "Meshes/Cube.005" then
+for i , v in pairs(game.workspace.PickableItem.Strawberry.Strawberry:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-7,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if _G.mm == true then
+                local map = game.Players.LocalPlayer.Inventory.Strawberry
+if map.Value == 60 then
+ local args = {
+    [1] = "Strawberry",
+    [2] = "60"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("WorldMarket_Remotes"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+                                   end
+                            end
+                     end)
+              end
+       end)
+end)
+
+
+page1:Toggle("ฟามไม้",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Wood.Wood:FindFirstChild "Construction Wood Base Break" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(407.517303, 58.4860725, -5075.06055, 0.997843623, 2.42673148e-09, -0.0656364337, -2.21279262e-09, 1, 3.33215233e-09, 0.0656364337, -3.17972693e-09, 0.997843623)
+elseif game:GetService("Workspace").PickableItem.Wood.Wood:FindFirstChild "Construction Wood Base Break" then
+for i , v in pairs(game.workspace.PickableItem.Wood.Wood:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,-7)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+end)
+
+
+page1:Toggle("ฟามเศษเหล็ก",nil, function(value)
+_G.mm = value
+spawn(function()
+    while _G.mm do wait()
+        pcall(function()
+if not game:GetService("Workspace").PickableItem.Scrap.Scrap:FindFirstChild "Orange" then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2574.59009, 58.8006134, -3422.17285, -0.0500079803, 1.67534004e-08, -0.998748839, -7.49656692e-09, 1, 1.71497465e-08, 0.998748839, 8.34481195e-09, -0.0500079803)
+elseif game:GetService("Workspace").PickableItem.Scrap.Scrap:FindFirstChild "Orange" then
+for i , v in pairs(game.workspace.PickableItem.Scrap.Scrap:GetDescendants()) do 
+        if v:IsA("MeshPart") then
+            repeat task.wait()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,-7,0)
+until _G.mm == false or not v.Parent
+                                    end
+                            end
+                     end
+              end)
+       end
+end)
+
+spawn(function()
+    while _G.mm do wait(.2)
+        pcall(function()
+            if _G.mm == true then 
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+if v.ClassName == "ProximityPrompt" then
+ fireproximityprompt(v,40)
+                                 end
+                          end
+                    end
+              end)
+       end
+end)
+end)
+
+page2:Ti("เพิ่มเติม")
+df = {}
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.Inventory:GetChildren()) do
+ table.insert(df,v.Name)
+ end
+
+local getdrop = page2:DropDown("เลือกของในตัว","เลือก",df, function(value)
+	as = value
+end)
+
+page2:Button("รีเช็ตของในตัว", function(value)
+getdrop:Clear()
+for i,v in pairs(game:GetService("Players").LocalPlayer.Inventory:GetChildren()) do
+ table.insert(df,v.Name)
+getdrop:Add(v.Name)
+ end
+end)
+
+ty = {}
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.Vault:GetChildren()) do
+ table.insert(ty,v.Name)
+ end
+
+
+local drop = page2:DropDown("เลือกของในตู้","เลือก",ty, function(value)
+	ss = value
+end)
+
+page2:Button("รีเช็ตของในตู้", function(value)
+drop:Clear()
+for i,v in pairs(game:GetService("Players").LocalPlayer.Vault:GetChildren()) do
+ table.insert(ty,v.Name)
+drop:Add(v.Name)
+ end
+end)
+
+local getslider = page2:Slder("จำนวน",1,100,60, function(value)
+     dx = value
+end)
+
+page2:Button("เก็บของเข้าตู้", function(value)
+local args = {
+    [1] = "Store",
+    [2] = as,
+    [3] = dx
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Vault"):FireServer(unpack(args))
+end)
+
+page2:Button1("เอาของออกตู้", function(value)
+local args = {
+    [1] = "Get",
+    [2] = ss,
+    [3] = dx
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Vault"):FireServer(unpack(args))
+end)
+
+page3:Ti("วาปจุดต่างๆ")
+
+page3:Button("โรงพยาบาล", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3915.25464, 61.1290855, -5118.99414, -0.999956965, -5.25753308e-09, -0.00927841384, -5.04882802e-09, 1, -2.25170531e-08, 0.00927841384, -2.24692389e-08, -0.999956965)
+end)
+
+
+page3:Button("ร้านขายรถ", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6257.74902, 58.4663544, -1297.32727, -0.649236798, 8.43538217e-09, -0.760586321, 2.87324919e-08, 1, -1.34354368e-08, 0.760586321, -3.05763201e-08, -0.649236798)
+end)
+
+
+page3:Button("ตลาดโลก", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5570.51514, 58.1158409, -2428.54614, 0.999758661, 7.55977538e-08, 0.0219691172, -7.54411857e-08, 1, -7.95539634e-09, -0.0219691172, 6.29609964e-09, 0.999758661)
+end)
+
+
+page3:Button("จุดเกิดผู้เล่นใหม่", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3501.82227, 74.7918777, -2604.51758, 0.990974426, 8.94898875e-08, -0.134051263, -9.18011764e-08, 1, -1.10609042e-08, 0.134051263, 2.32671358e-08, 0.990974426)
+end)
+
+
+page3:Button("เลเบล", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1912.72668, 58.7948265, -398.61972, 0.74596262, -1.0130849e-08, -0.66598779, 1.82975324e-08, 1, 5.28301936e-09, 0.66598779, -1.61268687e-08, 0.74596262)
+end)
+
+
+page4:Ti("วาปจุดฟาม")
+
+page4:Button("ขุดเหมือง", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-556.333435, 112.999977, -1078.71143, 0.0383393653, -2.13037019e-08, -0.999264777, 3.79788148e-08, 1, -1.98622203e-08, 0.999264777, -3.71893876e-08, 0.0383393653)
+end)
+
+
+page4:Button("สตอเบอร์รี่", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(316.179077, 58.7837067, 86.8468857, 0.981077671, 8.82877558e-08, 0.193614691, -8.15612111e-08, 1, -4.2713058e-08, -0.193614691, 2.61133781e-08, 0.981077671)
+end)
+
+
+page4:Button("แตงโม", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-903.559387, 56.9999886, -1966.40979, 0.0136971334, -3.02049017e-08, 0.999906182, -3.09966239e-08, 1, 3.06323393e-08, -0.999906182, -3.14132933e-08, 0.0136971334)
+end)
+
+
+page4:Button("ส้ม", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2486.31104, 109.478371, -2498.73999, 0.860441267, 2.65580358e-08, 0.509549618, -1.71768182e-08, 1, -2.31153017e-08, -0.509549618, 1.11369172e-08, 0.860441267)
+end)
+
+
+page4:Button("ผักกาด", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-886.760864, 58.4810753, -4643.43555, 0.0291027091, -1.09859517e-08, -0.999576449, -1.77091817e-08, 1, -1.15062102e-08, 0.999576449, 1.80365429e-08, 0.0291027091)
+end)
+
+
+page4:Button("ตัดไม้", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(407.517303, 58.4860725, -5075.06055, 0.997843623, 2.42673148e-09, -0.0656364337, -2.21279262e-09, 1, 3.33215233e-09, 0.0656364337, -3.17972693e-09, 0.997843623)
+end)
+
+
+page4:Button("เศษเหล็ก", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2574.59009, 58.8006134, -3422.17285, -0.0500079803, 1.67534004e-08, -0.998748839, -7.49656692e-09, 1, 1.71497465e-08, 0.998748839, 8.34481195e-09, -0.0500079803)
+end)
+
+page5:Ti("ผู้เล่น")
+Plr = {}
+for i,players in pairs(game.Players:GetChildren()) do
+    if players.Name ~= game.Players.LocalPlayer.Name then
+        table.insert(Plr,players.Name)
+    end
+end
+
+
+local Plr_Tab = page5:DropDown("เลือกผู้เล่น","เลือก",Plr, function(value)
+        SPlayer = value
+end)
+
+page5:Button("รีเช็ตผู้เล่น", function(value)
+Plr_Tab:Clear()
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+ table.insert(Plr,v.Name)
+Plr_Tab:Add(v.Name)
+ end
+end)
+
+page5:Button("วาปหาผู้เล่น[ถ้าไกลเกินจะไม่ติด]", function(value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[SPlayer].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,5)
+end)
+
+page5:Toggle("ออโต้วาปหาผู้เล่น",nil, function(value)
+        Tptoplayers = value
+        while Tptoplayers do wait()
+                pcall(function()
+                repeat task.wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[SPlayer].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,5)
+            until Tptoplayers == false or SPlayer.Humanoid.Health == 0
+           end)
+        end
+   end)
+page6:Ti("เสริม")
+
+page6:Toggle("ออโต้วาปหาผู้เล่น[ใต้ดินสำหรับฆ่า]",nil, function(value)
+        Tptoplayers = value
+        while Tptoplayers do wait()
+                pcall(function()
+                repeat task.wait()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[SPlayer].Character.HumanoidRootPart.CFrame * CFrame.new(0,-6,0)
+            until Tptoplayers == false or SPlayer.Humanoid.Health == 0
+           end)
+        end
+   end)
+   
+   
+page6:Button("ESP", function(value)
+local FillColor = Color3.fromRGB(175,25,255)
+local DepthMode = "AlwaysOnTop"
+local FillTransparency = 0.5
+local OutlineColor = Color3.fromRGB(255,255,255)
+local OutlineTransparency = 0
+
+local CoreGui = game:FindService("CoreGui")
+local Players = game:FindService("Players")
+local lp = Players.LocalPlayer
+local connections = {}
+
+local Storage = Instance.new("Folder")
+Storage.Parent = CoreGui
+Storage.Name = "Highlight_Storage"
+
+local function Highlight(plr)
+    local Highlight = Instance.new("Highlight")
+    Highlight.Name = plr.Name
+    Highlight.FillColor = FillColor
+    Highlight.DepthMode = DepthMode
+    Highlight.FillTransparency = FillTransparency
+    Highlight.OutlineColor = OutlineColor
+    Highlight.OutlineTransparency = 0
+    Highlight.Parent = Storage
+    
+    local plrchar = plr.Character
+    if plrchar then
+        Highlight.Adornee = plrchar
+    end
+
+    connections[plr] = plr.CharacterAdded:Connect(function(char)
+        Highlight.Adornee = char
+    end)
+end
+
+Players.PlayerAdded:Connect(Highlight)
+for i,v in next, Players:GetPlayers() do
+    Highlight(v)
+end
+
+Players.PlayerRemoving:Connect(function(plr)
+    local plrname = plr.Name
+    if Storage[plrname] then
+        Storage[plrname]:Destroy()
+    end
+    if connections[plr] then
+        connections[plr]:Disconnect()
+    end
+end)
+end)
+   
+page6:Toggle("HitBox",nil, function(value)
+    _G.HeadSize = 20
+	_G.Disabled = value
+game:GetService('RunService').RenderStepped:connect(function()
+		if _G.Disabled then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+						v.Character.HumanoidRootPart.Transparency = 0.8
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
+			end
+		end
+	end)
+end)
+
+page7:Ti("เสริม")
+
+local getlable = page7:Label("FPS")
+
+page7:Toggle("AtinAFK",nil, function(value)
+_G.AntiAFKEnabled = value
+    local vu = game:GetService("VirtualUser")
+    game.Players.LocalPlayer.Idled:connect(function()
+        if _G.AntiAFKEnabled then
+            vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+            wait(1)
+            vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+            print("AntiEnable")
+        end
+    end)
+end)
+
+page7:Toggle("จอขาว",nil, function(value)
+_G.WhiteScreen = value
+    while wait(0.1) do
+        game:GetService("RunService"):Set3dRenderingEnabled(not _G.WhiteScreen)
+    end
+end)
+
+
+page7:Button("ภาพกาก", function(value)
+local decalsyeeted = true
+    local g, w, l = game, game.Workspace, game.Lighting
+    local t = w.Terrain
+    sethiddenproperty(l, "Technology", 2)
+    sethiddenproperty(t, "Decoration", false)
+    t.WaterWaveSize, t.WaterWaveSpeed, t.WaterReflectance, t.WaterTransparency = 0, 0, 0, 0
+    l.GlobalShadows, l.FogEnd, l.Brightness = false, 9e9, 0
+    settings().Rendering.QualityLevel = "Level01"
+
+    local function handleDescendant(v)
+        if v:IsA("Accessory") or v:IsA("Shirt") or v:IsA("Pants") or v:IsA("ShirtGraphic") then
+            v:Remove()
+        elseif v:IsA("BasePart") and not v:IsA("MeshPart") then
+            v.Material, v.Reflectance = "Plastic", 0
+        elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
+            v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+            v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+            v.BlastPressure, v.BlastRadius = 1, 1
+        elseif (v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles")) then
+            v.Enabled = false
+        elseif v:IsA("MeshPart") and decalsyeeted then
+            v.Material, v.Reflectance, v.TextureID = "Plastic", 0, 10385902758728957
+        elseif v:IsA("SpecialMesh") and decalsyeeted then
+            v.TextureId = 0
+        end
+    end
+
+    for _, v in pairs(w:GetDescendants()) do
+        handleDescendant(v)
+    end
+
+    w.DescendantAdded:Connect(function(v)
+        wait()
+        handleDescendant(v)
+    end)
+
+    for _, e in ipairs(l:GetChildren()) do
+        if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+            e.Enabled = false
+        end
+    end
+end)
+
+page7:Button("UnFPS", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/y5reZYnG", true))()
+end)
+
+local getlable = page7:Label("ถ้าตาย")
+
+page7:Button("เกิดใหม่", function(value)
+    local args = {
+    [1] = "Respawn",
+    [2] = game:GetService("Players").LocalPlayer
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ReviveSystem"):WaitForChild("Event"):FireServer(unpack(args))
+end)
+
+page7:Toggle("ออโต้เกิดใหม่",nil, function(value)
+	_G.dd = value
+while _G.dd do wait(.5)
+pcall(function()
+local ss = game.Players.LocalPlayer.Character.Humanoid.Health
+if ss == 0 then
+local args = {
+    [1] = "Respawn",
+    [2] = game:GetService("Players").LocalPlayer
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ReviveSystem"):WaitForChild("Event"):FireServer(unpack(args))
+end
+end)
+end
+end)
+
+local getlable = page7:Label("เซิฟเวอร์")
+
+page7:Button("รีจอย", function(value)
+local ts = game:GetService("TeleportService")
+        local p = game:GetService("Players").LocalPlayer
+        ts:Teleport(game.PlaceId, p)
+    
+    local function HttpGet(url)
+        return game:GetService("HttpService"):JSONDecode(htgetf(url))
+    end
+end)
+
+page7:Button("ย้ายไปเซิฟคนน้อย", function(value)
+	local Http = game:GetService("HttpService") local TPS = game:GetService("TeleportService") local Api = "https://games.roblox.com/v1/games/" local _place = game.PlaceId local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100" function ListServers(cursor) local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or "")) return Http:JSONDecode(Raw) end local Server, Next; repeat local Servers = ListServers(Next) Server = Servers.data[1] Next = Servers.nextPageCursor until Server TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end)
+
+page8:Ti("เสริม")
+local getlable = page8:Label("ผู้ช่วยSSS HUB")
+page8:Button("แจ้งบัคที่", function(value)
+setclipboard("https://discord.com/invite/eZ59xsBn")
+end)
+
+local getlable = page8:Label("สามารถแจ้งบัคได้ที่@bossza_007.")_
