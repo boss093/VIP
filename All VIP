@@ -26,6 +26,6 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "VIPฟามไว[ปิง]",
 	Callback = function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/boss093/Auto-farnFast/main/VIP'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/boss093/VIP/main/VIP%E0%B8%9F%E0%B8%B2%E0%B8%A1%E0%B9%84%E0%B8%A7'))()
   end
 })
