@@ -1,6 +1,6 @@
 local Plr = game.Players.LocalPlayer.Name 
 
-if Plr == "DIP_OMG" or Plr == "robktz11" or Plr == "Network1980" or Plr == "BRTKKE11" then 
+if Plr == "DIP_OMG" or Plr == "robktz11" or Plr == "Network1980" or Plr == "BRTKKE11" or Plr == "4XUN1A" then 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "X HUB", HidePremium = false, IntroText = "SSS HUB",  SaveConfig = true, ConfigFolder = "SSS HUB"})
 
@@ -34,6 +34,6 @@ Tab:AddButton({
   
 end
 })
-elseif Plr ~= "DIP_OMG" or Plr ~= "robktz11" or Plr ~= "Network1980" or Plr == "BRTKKE11" then 
+elseif Plr ~= "DIP_OMG" or Plr ~= "robktz11" or Plr ~= "Network1980" or Plr ~= "4XUN1A" or Plr ~= "BRTKKE11" then 
 game:GetService("Players").LocalPlayer:Kick("ไม่มีไวริสน้าาแอบเอามารึป่าว")
 end 
